@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php
-    if(!isset($_SESSION['productsss']) || empty ($_SESSION['productsss']))
+    if(!isset($_SESSION['products']) || empty ($_SESSION['products']))
     {
         echo "<p>Aucun produit en session...</p>";
     }
@@ -27,7 +27,7 @@
             "</thead>",
             "<tbody>";
     $totalGeneral = 0;
-    foreach ($_SESSION['productsss'] as $index => $product)
+    foreach ($_SESSION['products'] as $index => $product)
     {
         echo "<tr>",
             "<td>".$index."</td>",
