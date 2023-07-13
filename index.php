@@ -23,7 +23,7 @@
         </p>
         <p>
             <label>
-                Qualité désirée :
+                Quantité désirée :
                 <input type="number" name="qtt" value="1">
             </label>
         </p>
