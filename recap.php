@@ -21,6 +21,7 @@
                 "<tr>",
                     "<th>#</th>",
                     "<th>Nom</th>",
+                    "<th>Prix</th>",
                     "<th>Quantité</th>",
                     "<th>Total</th>",
                 "</tr>",
