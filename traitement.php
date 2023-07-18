@@ -35,7 +35,7 @@ switch ($_GET['action']){
 
         /* ajouter par 1*/
         case "plus":
-            if(isset($_SESSION["products"]))
+            if(isset($_SESSION["products"])) 
                 {
                     $_SESSION["products"][$_GET["index"]]["qtt"]++;
                     $_SESSION["products"][$_GET["index"]]["total"]+= 
