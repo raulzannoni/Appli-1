@@ -7,8 +7,8 @@
 <body>
     
     <?php
+    session_start();
     ob_start();
-        session_start();
     /* verifier si la session existe et non vide*/
     if(!isset($_SESSION['products']) || empty ($_SESSION['products']))
     {
@@ -54,19 +54,20 @@
 
             
         }
-        $contenu  = ob_get_clean();
-        require_once "template.php";
-        $titre = "Voir produit";
+    $titre = "voir produit";
+    $contenu = ob_get_clean();
+
+    require_once "template.php";
         ?>
        
     </body>
-    
     <footer>
-        <label class="d-flex p-2" >
+    <label class="d-flex p-2" >
         <a href="index.php" class="p-3 mb-2 bg-primary text-white">Ajouter encore un produit</a> 
     </label>
     <!--bouton supprime tout le panier-->
     <label class="d-flex p-2">
         <a href='traitement.php?action=supp'class="p-3 mb-2 bg-primary text-white">Vider le panier</a>
-        </label>
-    </footer>
+    </label>
+</footer>
+    
