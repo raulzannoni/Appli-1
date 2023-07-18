@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajout produit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    
-    
+        
     <title>Ajout produit</title>
     
 </head>
@@ -18,11 +17,12 @@
     
     <form action="traitement.php?action=add" method="post">
     <?php 
-    session_start();
+    require('calcule.php');
+   
     
         if(empty($_SESSION["products"]))
         {echo "Il n'y a aucun produit dans le panier";}
-        else{ echo "Produit Ajouté ". " Il y a ". count($_SESSION["products"])." produits dans le panier";}            
+        else{ echo "Produit Ajouté ". " Il y a ". $nombreProduits." produits dans le panier";}            
                            
     ?>
     
